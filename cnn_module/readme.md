@@ -7,10 +7,10 @@ this is the repo that contains the code document and image of the cnn module of 
 * VHDL
 # Tools And Technology
 * **Siemens EDA tools**
-* **Calibre**: for layout vs schematic.
 * **NitroSoc** for placement And Routing
 * **ModelSim** for hdl design, post routing simulation , and post sysnthesis simulation 
 * **45 Nanometer Technology**: 
+* **Calibre**:  for layout vs schematic and GDSII. (this tool was cancelled by course admin due to lack of time .)
 
 ![ScreenShot of the cnn module architecture](https://github.com/marait123/CNN_Project/blob/master/cnn_module/doc-images/cnn_schema.JPG?raw=true)
 ## Main Modules of the hardware 
