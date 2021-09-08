@@ -1,5 +1,16 @@
 # CNN Module hardware architecture
-
+`
+this is the repo that contains the code document and image of the cnn module of the cnn architecture on hardwre project
+`
+# languages
+* TCL
+* VHDL
+# Tools And Technology
+* **Siemens EDA tools**
+* **Calibre**: for layout vs schematic.
+* **NitroSoc** for placement And Routing
+* **ModelSim** for hdl design, post routing simulation , and post sysnthesis simulation 
+* **45 Nanometer Technology**: 
 
 ![ScreenShot of the cnn module architecture](https://github.com/marait123/CNN_Project/blob/master/cnn_module/doc-images/cnn_schema.JPG?raw=true)
 ## Main Modules of the hardware 
