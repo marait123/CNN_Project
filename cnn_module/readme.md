@@ -5,6 +5,12 @@
 ## Main Modules of the hardware 
 * **Controller**: this is the module responsible for producing the signals that govern the movement of information among different modules of the architecture.
 * **Bus**: this bus is connected to dataout of the memory where it receives data from the memory when controller instructs the memory to output data
+* **Convolution Layer Circuit**: this is the circuit that does convolution on all of the input at the same time (one clock cycle for all the input). 
+* **Pooling Layer Circuit**: this is the circuit that does pooling operation on all of the input at the same time (one clock cycle for all the input). 
+* **Filter Buffer**: this is the buffer where the filter weights are being placed after being read from memory
+* **Data Buffer**: this is the buffer where the input data (eg. the image is placed after it is being read from memory
+* **Pooling Output Mux**: this is the mux which is used to write the output of the layer to memory ( since we can write only one word at a time we use it to select word by word and write it tot the memroy)
+* **Convolution Output Mux**: same as pooling output mux but for the output of the convolution.
 # Algorithm (how it works)
 ## General Description of the Algo
 	## below is just a description of the algorithm
@@ -18,7 +24,7 @@
 				- Convolve the filter with input.
 				- Save intermediate result.
 		- If layer is pooling:
-			- Read input.
+			- Read all input and place inside buffers.
 			- do the pooling operation.
 			- Save intermediate result.
 	4.When all layers are finished done signal becomes ‘1’ and now data is ready to be delivered to FC-sub team.
@@ -121,3 +127,21 @@ if layer_type[current_layer_counter] == 0;
 
 	
 ```
+# Work Devision:
+## Mohammed Ibrahim
+	* System Architecture and Design (Schema Design) 
+	* Pseudo Code and ALgorithm Design.
+	* Controller Internal Design, preparation, Intialization and integration into the larger system.
+	* **double for loop generate** to do all at the same time convolution.
+## Ahmed Magdy:
+	* Convolution Submodule.
+	* Pooling SubModule.
+	* Project Integration.
+## Mohammed Abo Bakr
+	* Controller Convolution.
+	* Tunning variations in the input size
+## Omar Tarek
+	* Integration.
+	* Adminstrative work.
+	* Work Coordination and work negotiation.
+	* helped with uncompeleted work of cnn module integration into the bigger architecture>
